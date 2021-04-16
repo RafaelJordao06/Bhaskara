@@ -5,7 +5,7 @@ int main (void)
 {
     //Declarar as variaveis 
     float a,b,c; //Variavel de entradas
-    float x1,x2; // Variavel de saida
+    float x1,x2,x11,x21; // Variavel de saida
     float d; //Delta da equação
     char j; //Para manter a execucao ate teclar 'n'
 
@@ -37,10 +37,13 @@ int main (void)
         printf("     -(%.1f) +- %.1f \n", b, sqrt(d));
         printf("X =  __________________\n");
         printf("          2 . (%.1f)\n\n", a);
+        
+        fflush(stdin); //Limpa o Buffer do teclado
 
         //Calcular raizes 
-        x1 =(-(b)  + sqrt(d))/2*(a);
-        x2 = (-(b) - sqrt(d))/2*(a);
+        x1 = ((-(b)  + sqrt(d)))/(2*(a));
+
+        x2 = ((-(b) - sqrt(d)))/(2*(a));
 
         printf("x1 = \n");
         printf("   %.2f\n", -(b)  + sqrt(d));
